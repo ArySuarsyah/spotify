@@ -1,4 +1,7 @@
+/* eslint-disable no-undef */
 import axios from "axios";
+
+const baseURL = process.env.baseURL
 
 const http = (token) => {
   const headers = {};
@@ -8,7 +11,7 @@ const http = (token) => {
 
   return axios.create({
     headers,
-    baseURL: "https://api.spotify.com",
+    baseURL
     // baseURL: "http://localhost:8888",
   });
 };
